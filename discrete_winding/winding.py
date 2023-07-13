@@ -20,7 +20,7 @@ for i in range(sublattices):
     # Definition holds only for 2D systems, so you must select a layer "slice" to take of your systems.
     # Here, I select the plane z=0.
     if sublattices == 1:
-        layer = np.where(allpoints[:,2] == 1*2.715)[0]
+        layer = np.where(allpoints[:,2] == 0)[0]
     elif sublattices > 1:
         layer = np.where(np.logical_and(allpoints[:,2] == 0, atominfo[:,0] == i))[0]
     points = allpoints[layer]
